@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/home.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="box">
+      <h1 class="branding">BBGN</h1>
+
+      <nav class="nav">
+        <ul class="header-list header-list--nav">
+          <li class="li nav--list-item"><a href="/">Home</a></li>
+          <li class="li nav--list-item">Shop</li>
+          <li class="li nav--list-item">Contact</li>
+          <li class="li nav--list-item">About</li>
+        </ul>
+      </nav>
+
+      <ul id="membermenu" class="header-list header-list--usrmenu">
+        <li class="li usrmenu-item"><button class="button button--usrmenu">Log In</button></li>
+        <li class="li usrmenu-item"><button class="button button--usrmenu">Sign Up</button></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <main>
+    <div id="margin-top">
+
+      <div class="container deck-grid-container">
+        <div class="box ad-box">
+          <article class="article ad-article--a">A</article>
+          <article class="article ad-article--b">B</article>
+          <article class="article ad-article--c">C</article>
+        </div>
+      </div>
+
+      <div class="container article-grid-container">
+        <div class="box article-box">
+          <small><a href="/create-news-item">New Post</a></small>
+
+
+
+          <article class="article blog-article" th:each="newsItem : ${newsItems}">
+               
+              <div id="content-padding">
+            <div id="text-spacing">
+              <h2 class="news-headline" th:text="${newsItem.headline}"></h2>
+            </div>
+            <div id="text-spacing">
+                <h6 class="news-headline" th:text="${newsItem.pubDate}"></h6>
+              </div>
+            
+
+            <div id="text-spacing">
+              <p class="news-content" th:text="${newsItem.content}"></p>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+</body>
+
+</html>

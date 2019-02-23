@@ -10,4 +10,5 @@ public class BbgnWebsiteApplication {
 		SpringApplication.run(BbgnWebsiteApplication.class, args);
 	}
 
+
 }
