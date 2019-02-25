@@ -1,6 +1,6 @@
 package tv.bbgn.bbgnwebsite.controllers;
 
-import java.util.Date;
+
 
 import javax.annotation.Resource;
 
@@ -36,8 +36,8 @@ public class HomeController {
 
 
 	@PostMapping("/create-news-item")
-	public String greetingSubmit(Date pubDate, String headline, String content) {
-		newsItems.save(new NewsItem(pubDate, headline, content));
+	public String greetingSubmit(String headline, String content) {
+		newsItems.save(new NewsItem(headline, content));
 		return "redirect:/";
 	}
 }
