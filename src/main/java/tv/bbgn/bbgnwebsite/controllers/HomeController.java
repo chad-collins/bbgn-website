@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-import tv.bbgn.bbgnwebsite.NewsItem;
+import tv.bbgn.bbgnwebsite.models.NewsItem;
 import tv.bbgn.bbgnwebsite.repositories.NewsItemsRepository;
 
 @Controller
@@ -28,14 +27,14 @@ public class HomeController {
 	}
 	
 	
-	@GetMapping("/create-news-item")
+	@GetMapping("/add-news")
 	public String newNewsPost(Model model) {
 		model.addAttribute("newsItems", newsItems.findAll());
-		return "create-news-item";
+		return "add-news";
 	}
 
 
-	@PostMapping("/create-news-item")
+	@PostMapping("/add-news")
 	public String greetingSubmit(String headline, String content) {
 		newsItems.save(new NewsItem(headline, content));
 		return "redirect:/";

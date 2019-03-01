@@ -1,4 +1,4 @@
-package tv.bbgn.bbgnwebsite;
+package tv.bbgn.bbgnwebsite.models;
 
 
 

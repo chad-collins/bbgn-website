@@ -19,7 +19,7 @@
       <nav class="nav">
         <ul class="header-list header-list--nav">
           <li class="li nav--list-item"><a href="/">Home</a></li>
-          <li class="li nav--list-item">Shop</li>
+          <a href="/reviews"><li class="li nav--list-item">Reviews</li></a>
           <li class="li nav--list-item">Contact</li>
           <li class="li nav--list-item">About</li>
         </ul>
@@ -46,8 +46,10 @@
 
       <div class="container article-grid-container">
         <div class="box article-box">
-          <small><a href="/create-news-item">New Post</a></small>
-
+          <ul>
+          <li><small><a href="/add-news">New Post</a></small></li>
+         <li><small><a href="/reviews/write-review">Write Review</a></small></li>
+        </ul>
 
 
           <article class="article blog-article" th:each="newsItem : ${newsItems}">
